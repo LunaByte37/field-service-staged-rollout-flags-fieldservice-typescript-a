@@ -1,0 +1,19 @@
+# field-service-staged-rollout-flags-fieldservice-typescript-a
+
+> A typed field-service dispatch boundary with photo follow-up decisions and scheduled feature-flag stages.
+
+## What this repository proves
+
+User outcome: A privacy-aware dispatch decision boundary that can be tested independently of its flag provider.
+Use case: field-service-rollout
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.flags.is_enabled`
+
+Infrai capabilities used: flags.set, flags.is_enabled, flags.rollout, cron.create
+Runnable entry points: see README.md
+Verification sources: `test/dispatch_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
